@@ -26,7 +26,7 @@ class Seg_Point_NuScenes(data.Dataset):
         info = self.nusc_infos[index]
 
         lidar_sd_token = self.nusc.get('sample', info['token'])['data']['LIDAR_TOP']
-        lidarseg_labels_filename = os.path.join('data', self.nusc.get('lidarseg', lidar_sd_token)['filename'])
+        lidarseg_labels_filename = os.path.join('data/nuscenes/', self.nusc.get('lidarseg', lidar_sd_token)['filename'])
         points_label = np.fromfile(lidarseg_labels_filename, dtype=np.uint8).reshape([-1, 1])
         points_label = np.vectorize(self.learning_map.__getitem__)(points_label)
         

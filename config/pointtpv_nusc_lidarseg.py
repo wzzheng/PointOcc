@@ -57,7 +57,7 @@ dataset_params = dict(
 
 train_data_loader = dict(
     data_path = "data/nuscenes/",
-    imageset = "./data/nuscenes_infos_train.pkl",
+    imageset = "./data/nuscenes/nuscenes_infos_train.pkl",
     batch_size = 1,
     shuffle = True,
     num_workers = 1,
@@ -65,7 +65,7 @@ train_data_loader = dict(
 
 val_data_loader = dict(
     data_path = "data/nuscenes/",
-    imageset = "./data/nuscenes_infos_val.pkl",
+    imageset = "./data/nuscenes/nuscenes_infos_val.pkl",
     batch_size = 1,
     shuffle = False,
     num_workers = 1,

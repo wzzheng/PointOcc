@@ -2,7 +2,7 @@
 import os, time, argparse, os.path as osp, numpy as np
 import torch
 import torch.distributed as dist
-os.environ['CUDA_VISIBLE_DEVICES'] = '2'
+# os.environ['CUDA_VISIBLE_DEVICES'] = '2'
 
 from utils.metric_util import MeanIoU
 from utils.load_save_util import revise_ckpt, revise_ckpt_2
