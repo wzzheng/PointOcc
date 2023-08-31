@@ -136,7 +136,6 @@ out/
 debug.py
 work_dir/
 pretrain/
-assets/
 *.sh
 *.pth
 core.*
