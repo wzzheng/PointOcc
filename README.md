@@ -10,14 +10,14 @@
 
 ## Highlights
 
-- PointOcc enables the use of 2D image backbones for efficient point-based 3D semantic occupancy prediction.
-- The Lidar-only PointOcc even outperforms Lidar & Camera multi-modal methods by a large margin.
+- **PointOcc enables the use of 2D image backbones for efficient point-based 3D semantic occupancy prediction.**
+- **The Lidar-only PointOcc even outperforms Lidar & Camera multi-modal methods by a large margin.**
 
-<img src="./assets/performance.png" alt="performance" style="zoom:50%;" />
+![overview](./assets/overview.png)
 
 ## Introduction
 
-Semantic segmentation in autonomous driving has been undergoing an evolution from sparse point segmentation to dense voxel segmentation, where the objective is to predict the semantic occupancy of each voxel in the concerned 3D space. The dense nature of the prediction space has rendered existing efficient 2D-projection-based methods (e.g., bird's eye view, range view, etc.) ineffective, as they can only describe a subspace of the 3D scene. To address this, we propose a cylindrical tri-perspective view to represent point clouds effectively and comprehensively and a PointOcc model to process them efficiently. Considering the distance distribution of LiDAR point clouds, we construct the tri-perspective view in the cylindrical coordinate system for more fine-grained modeling of nearer areas. We employ spatial group pooling to maintain structural details during projection and adopt 2D backbones to efficiently process each TPV plane. Finally, we obtain the features of each point by aggregating its projected features on each of the processed TPV planes without the need for any post-processing. Extensive experiments on both 3D occupancy prediction and LiDAR segmentation benchmarks demonstrate that the proposed PointOcc achieves state-of-the-art performance with much faster speed. Specifically, despite only using LiDAR, PointOcc significantly outperforms all other methods, including multi-modal methods, with a large margin on the OpenOccupancy benchmark.
+Semantic segmentation in autonomous driving has been undergoing an evolution from sparse point segmentation to dense voxel segmentation, where the objective is to predict the semantic occupancy of each voxel in the concerned 3D space. The dense nature of the prediction space has rendered existing efficient 2D-projection-based methods (e.g., bird's eye view, range view, etc.) ineffective, as they can only describe a subspace of the 3D scene. To address this, we propose a cylindrical tri-perspective view (TPV) to represent point clouds effectively and comprehensively and a PointOcc model to process them efficiently. Considering the distance distribution of LiDAR point clouds, we construct a tri-perspective view in the cylindrical coordinate system for more fine-grained modeling of nearer areas. We employ spatial group pooling to maintain structural details during projection and adopt 2D backbones to efficiently process each TPV plane. Finally, we obtain the features of each point by aggregating its projected features on each of the processed TPV planes without the need for any post-processing. Extensive experiments on both 3D occupancy prediction and LiDAR segmentation benchmarks demonstrate that the proposed PointOcc achieves state-of-the-art performance with much faster speed. Specifically, despite only using LiDAR, PointOcc significantly outperforms all other methods, including multi-modal methods, with a large margin on the OpenOccupancy benchmark.
 
 ![network](./assets/network.png)
 
