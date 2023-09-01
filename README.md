@@ -1,6 +1,6 @@
 # PointOcc: Cylindrical Tri-Perspective View for Point-based 3D Semantic Occupancy Prediction
 
-### [Paper](https://arxiv.org/pdf/)
+### [Paper](https://arxiv.org/pdf/2308.16896)
 
 > PointOcc: Cylindrical Tri-Perspective View for Point-based 3D Semantic Occupancy Prediction
 
@@ -117,7 +117,7 @@ If you find this project helpful, please consider citing the following paper:
 @article{pointocc,
     title={PointOcc: Cylindrical Tri-Perspective View for Point-based 3D Semantic Occupancy Prediction},
     author={Zuo, Sicheng and Zheng, Wenzhao and Huang, Yuanhui and Zhou, Jie and Lu, Jiwen},
-    journal={arXiv preprint arXiv:},
+    journal={arXiv preprint arXiv:2308.16896},
     year={2023}
 }
 ```
