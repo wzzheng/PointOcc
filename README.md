@@ -72,7 +72,26 @@ pip install pandas==1.4.4
 ## Preparing
 
 1. Download pretrain weights from [here](https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_tiny_patch4_window7_224.pth) and put it in pretrain/
-2. Create soft link from data/nuscenes to your_nuscenes_path 
+2. Follow detaild instructions to [prepare nuScenes-Occupancy](https://github.com/JeffWang987/OpenOccupancy/blob/main/docs/prepare_data.md).
+3. Folder structure:
+```
+PointOcc
+├── pretrain/
+│   ├── swin_tiny_patch4_window7_224.pth/
+├── data/
+│   ├── nuscenes/
+│   │   ├── maps/
+│   │   ├── samples/
+│   │   ├── sweeps/
+│   │   ├── lidarseg/
+│   │   ├── v1.0-test/
+│   │   ├── v1.0-trainval/
+│   │   ├── nuscenes_occ_infos_train.pkl/
+│   │   ├── nuscenes_occ_infos_val.pkl/
+│   ├── nuScenes-Occupancy/
+│   │   ├── scene_0ac05652a4c44374998be876ba5cd6fd/
+│   │   ├── ...
+```
 
 ## Getting Started
 
